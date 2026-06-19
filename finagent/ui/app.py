@@ -4,12 +4,15 @@ import pandas as pd
 import requests
 import streamlit as st
 
-internal_api = os.getenv("FINAGENT_API_HOSTPORT")
-API = (
-    f"http://{internal_api}/api/v1"
-    if internal_api
-    else os.getenv("FINAGENT_API_URL", "http://localhost:8000/api/v1")
-)
+if os.getenv("RENDER_EXTERNAL_URL"):
+    API = os.getenv("FINAGENT_API_URL", "https://finagent-ai-api.onrender.com/api/v1")
+else:
+    internal_api = os.getenv("FINAGENT_API_HOSTPORT")
+    API = (
+        f"http://{internal_api}/api/v1"
+        if internal_api
+        else os.getenv("FINAGENT_API_URL", "http://localhost:8000/api/v1")
+    )
 API_ROOT = API.removesuffix("/api/v1")
 INDIAN_STOCKS = {
     "Reliance Industries": "RELIANCE.NS",
