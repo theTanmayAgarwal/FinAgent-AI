@@ -1,8 +1,22 @@
 # FinAgent AI
 
+[![CI](https://github.com/theTanmayAgarwal/FinAgent-AI/actions/workflows/ci.yml/badge.svg)](https://github.com/theTanmayAgarwal/FinAgent-AI/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph-6B4EFF)](https://www.langchain.com/langgraph)
+[![FastAPI](https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Live](https://img.shields.io/badge/Live_Demo-Render-46E3B7?logo=render&logoColor=black)](https://finagent-ai-dashboard.onrender.com/)
+
 FinAgent AI is a production-oriented, explainable stock-market research platform that models a professional investment committee with 12 LangGraph agents. It produces a scored BUY/HOLD/SELL view, competing bull and bear cases, an auditable evidence trail, a confidence score, a risk-aware allocation suggestion and a downloadable PDF.
 
 > Educational software, not investment advice. Live commercial use requires licensed point-in-time data, security/compliance review, model evaluation and human oversight.
+
+## Live deployment
+
+- **Application:** [finagent-ai-dashboard.onrender.com](https://finagent-ai-dashboard.onrender.com/)
+- **API documentation:** [finagent-ai-api.onrender.com/docs](https://finagent-ai-api.onrender.com/docs)
+- **Health endpoint:** [finagent-ai-api.onrender.com/health](https://finagent-ai-api.onrender.com/health)
+
+The free Render services can take about a minute to wake after inactivity. Create a local account in the application sidebar, then select an NSE/BSE ticker and run the investment committee.
 
 ## What is included
 

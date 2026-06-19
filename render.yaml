@@ -33,11 +33,8 @@ services:
     dockerCommand: streamlit run finagent/ui/app.py --server.address 0.0.0.0 --server.port $PORT --server.headless true
     autoDeployTrigger: checksPass
     envVars:
-      - key: FINAGENT_API_HOSTPORT
-        fromService:
-          type: web
-          name: finagent-ai-api
-          property: hostport
+      - key: FINAGENT_API_URL
+        value: https://finagent-ai-api.onrender.com/api/v1
 
 databases:
   - name: finagent-ai-db
