@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finagent-ai"
+version = "1.0.0"
+description = "Explainable multi-agent stock-market intelligence platform"
+requires-python = ">=3.11"
+dependencies = [
+  "alembic>=1.14,<2", "bcrypt>=4.2,<5", "chromadb>=0.6,<1", "email-validator>=2.2,<3", "fastapi>=0.115,<1",
+  "httpx>=0.28,<1", "jinja2>=3.1,<4", "langgraph>=0.3,<1", "numpy>=2.1,<3",
+  "openai>=1.68,<2", "pandas>=2.2,<3", "passlib>=1.7,<2", "prometheus-client>=0.21,<1",
+  "psycopg[binary]>=3.2,<4", "pydantic-settings>=2.8,<3", "pyjwt>=2.10,<3",
+  "python-multipart>=0.0.20,<1", "redis>=5.2,<6", "reportlab>=4.3,<5",
+  "sqlalchemy>=2.0,<3", "streamlit>=1.43,<2", "uvicorn[standard]>=0.34,<1", "yfinance>=0.2.54,<1"
+]
+
+[project.optional-dependencies]
+dev = ["coverage>=7.6,<8", "mypy>=1.15,<2", "pytest>=8.3,<9", "pytest-asyncio>=0.25,<1", "pytest-cov>=6,<7", "ruff>=0.11,<1"]
+
+[tool.setuptools.packages.find]
+include = ["finagent*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

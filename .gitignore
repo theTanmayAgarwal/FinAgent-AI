@@ -1,0 +1,12 @@
+.env
+.venv/
+*.egg-info/
+__pycache__/
+*.py[cod]
+*.db
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+data/chroma/
+reports/*.pdf
